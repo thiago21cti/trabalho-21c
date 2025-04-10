@@ -52,14 +52,11 @@ function calculateTipAmountPerPerson() {
   let tipAmountPerPerson = (bill * tipPercentage) / numberOfPeople;
   tipAmountStrong.textContent = `$${tipAmountPerPerson.toFixed(2)}`;
   return tipAmountPerPerson;
-}
-
-function calculateTotalPerPerson(tipAmountPerPerson) {
+} function calculateTotalPerPerson(tipAmountPerPerson) {
   let totalStrong = document.querySelector(".total strong");
   let totalAmountPerPerson = (bill / numberOfPeople) + tipAmountPerPerson;
   totalStrong.textContent = `$${totalAmountPerPerson.toFixed(2)}`;
 }
-
 function reset() {
   bill = 0;
   tipPercentage = 0;
@@ -70,7 +67,6 @@ function reset() {
   document.querySelector("#people").value = "";
 
   removeClassButtonSelected();
-
-  document.querySelector(".total strong").textContent = "$0.00";
+ document.querySelector(".total strong").textContent = "$0.00";
   document.querySelector(".amount strong").textContent = "$0.00";
 }
